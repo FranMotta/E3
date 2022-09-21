@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Poppins:ital@1&family=Roboto+Condensed:ital@1&display=swap');
+:root {
+    --bg-white:  #FDFEFE;
+    --bg-litewhite: #F0F3F4;
+    --bg-silver: #C0C0C0;
+    --bg-gray:  #808080;
+    --bg-letter: #312F2F;
+    --bg-black: #000000;
+    --bg-bordo:rgb(102, 35, 35);
+    --bg-red:  #922B21;
+    --bg-rose:  #F2D7D5;
+    --bg-lrose: #E6B0AA;
+    --bg-grimso:  #D98880;
+    --bg-grimsom: #E6B0AA;
+    --bg-green: #52BE80;
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif JP', serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header {
+    background: var(--bg-black);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    padding: 0 30px 0px 30px;
+    position: fixed;
+    top: 0;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.logo {
+    max-width: 200px;
+}
+.fjfm {
+    background: transparent;
+    color: var(--bg-litewhite);
+    font-weight: 500;
+    font-size: 20px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 600px ;
+    max-height: 150px;
+}
+.navbar,
+.navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    
+}
+.navbar{
+    gap: 60px;
+}
+
+.navbar-list {
+    gap: 40px;
+}
+
+.navbar-list a{
+    color: var(--bg-gray);
+    font-size: 16px;
+}
+
+.donation-icon {
+    border: 2px solid var(--bg-rose);
+    padding: 12px 18px;
+    margin-top: 3px;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 700;
+    cursor: pointer;
+}
+
+main {
+    background: rgb(168, 81, 81);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-white);
+    width: 100%;
+}
+
+/*hero
+para llamar a un id se pone #
+para llama al nombre de una clase es .
+etiqueta es solo el nnombre
+*/
+#hero { 
+    margin-top: 155px ;
+    padding: 70px 0;
+    /*70 de padding top-botton y 0 de R-L*/
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+
+}
+.hero-info h1 {
+    font-size: 48px;
+    width: 80%;
+    min-width: 500px;
+    font-weight: 800;
+    color: white;
+    /*80% del contenedor no del viewpoort*/
+}
+.hero-info p{
+    font-size: 20px;
+    width: 80%;
+    color: var(--bg-white);
+
+}
+
+.hero-info p > span{
+    font-weight: 800;
+}
+
+
+.hero-info a{
+    color: var(--bg-white);
+    background-color: var(--bg-letter);
+    width: 200px;
+    padding: 20px 0px;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+.hero-card {
+    width: 300px;
+    background: var(--bg-rose);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; 
+
+}
+.hero-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+.hero-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.hero-card-top h3{
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis ; 
+    color: var(--bg-letter);
+}
+.hero-card-top span{ 
+    background-color: var(--bg-red);
+    text-align: center;
+    padding: 0 5px;
+    top: 0px;
+    border-radius: 2px;
+    font-size: 16px;
+    align-items: center;
+}
+.hero-card-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.hero-card-creator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+
+}
+.hero-card-creator button{
+    height: 50px;
+    width: 100px;
+    align-self: flex-start;
+    background-color: var(--bg-letter);
+    border: var(--bg-letter);
+    border-radius: 10px;
+}
+.bn{
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.creator-info p,
+ .hero-card-price p { 
+    color: var(--bg-letter);
+    font-size: 15px;
+    font-weight: 800;
+}
+.hero-card-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color:var(--bg-grimso) ;
+    border-radius: 10px;
+    padding: 0px 10px;
+    gap: 1px;
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+.hero-card-price span,
+.creator-info p:last-child{
+    font-size: 15px;
+}
+.hero-card-price span{
+    font-weight: 600;
+}
+ /* INFO CARD */
+#info{
+    padding: 70px 0px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+#info h2{
+    font-size: 32px;
+    font-weight: 800;
+}
+.info-cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.info-card{
+    width: 300px;
+    height: 300px;
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--bg-rose);
+    border-radius: 50%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.info-card img{
+    width: 80px;
+}
+.info-card p{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--bg-letter);
+}
+.info-card h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--bg-bordo);
+}
+/* Discover section */
+
+#discover {
+    padding: 70px 0;
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+.discover-info {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+#discover h2{
+    font-size: 40px;
+    width: 45%;
+    font-weight: 800;
+    color: var(--bg-black);
+}
+
+.discover-text {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 20px;
+}
+
+.discover-text p{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+}
+
+.discover-text a{
+    color: var(--bg-white);
+    font-weight: 300;
+    text-decoration: underline;
+    background-color: var(--bg-letter);
+    border-radius: 15px;
+    width: 110px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.discover-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.discover-cards img{
+    width: 30%;
+    background-color: var(--bg-grimso);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Unidades */
+
+#units {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    max-width: 1200px;
+    width: 100%;
+}
+#units h2{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.units-fa{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 15px;
+    
+}
+.unit {
+    background: var(--bg-black);
+    color: var(--bg-silver);
+    border-radius: 5px;   
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.unit-contairner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 0px;
+    max-width: 1200px;
+}
+.matter {
+    background-color: var(--bg-bordo);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px; 
+}
+
+.boti, .botivii {
+    max-width: 100px;
+    background-color: var(--bg-rose);
+    border-radius: 15%;
+    padding: 2px 5px;
+}
+
+.matter-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.yo{
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.matter-top,
+.matter-mid,
+.matter-bot { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.matter-top h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.matter-top p,
+.matter-mid p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--bg-silver);
+}
+
+.matter-teacher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.matter-mid span {
+    font-weight: 800;
+}
+
+
+.matter-top{
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 2px;
+    gap: 10px;
+}
+
+
+.matter-offer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.offer-time{
+    display: flex;
+    gap: 10px;
+    font-weight: 600;
+    align-items: center;
+}
+.offer-time img{
+    width: 20px;
+}
+ 
+.btn-add {
+    background-color: var(--bg-letter);
+    border: none;
+    padding: 5px 15px;
+    color: var(--bg-silver);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-curse {
+    display: flex;
+    align-self: center;
+}
+.btn-curse {
+    background: none;
+    border: 1px solid var(--bg-bordo);
+    padding: 15px 20px;
+    color: var(--bg-silver);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--bg-grimso);
+    color: var(--bg-silver);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0 15px 0;
+}
+.footer-links a{
+    color: var(--bg-silver);
+    font-weight: 400;
+    font-size: 16px;
+}
+.footer-copy {
+    color: var(--bg-silver);
+    font-weight: 300;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.footer-copy a{ 
+    color: var(--bg-silver);
+    font-size: 12px;
+    font-weight: 300;
+}
