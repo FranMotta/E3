@@ -25,7 +25,7 @@
 }
 
 header {
-    background: var(--bg-black);
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgb(168, 81, 81) 100%);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,9 @@ header {
     padding: 0 30px 0px 30px;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
+/* indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
 .navbar-logo {
     display: flex;
     align-items: center;
@@ -76,6 +78,9 @@ header {
     font-size: 16px;
 }
 
+#toggle-menu, .menu-label{
+    display: none;
+}
 .donation-icon {
     border: 2px solid var(--bg-rose);
     padding: 12px 18px;
@@ -102,10 +107,10 @@ para llama al nombre de una clase es .
 etiqueta es solo el nnombre
 */
 #hero { 
-    margin-top: 155px ;
+    margin-top: 150px ;
     padding: 70px 0;
     /*70 de padding top-botton y 0 de R-L*/
-    max-width: 1200px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,14 +291,23 @@ etiqueta es solo el nnombre
     font-size: 18px;
     color: var(--bg-bordo);
 }
-/* Discover section */
+/* Discover section - proyectos*/
 
 #discover {
     padding: 70px 0;
     max-width: 1200px;
     width: 100%;
 }
-
+#discover-py {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 0;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+} 
 
 .discover-info {
     display: flex;
@@ -306,6 +320,25 @@ etiqueta es solo el nnombre
     width: 45%;
     font-weight: 800;
     color: var(--bg-black);
+}
+#discover-py h2{
+    font-size: 40px;
+    width: 45%;
+    font-weight: 800;
+    color: var(--bg-silver);
+}
+.discover-info-text{
+    background: var(--bg-gray);
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.discover-curse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 5px 0 5px;
+    background-color: var(--bg-bordo);  
 }
 
 .discover-text {
@@ -330,6 +363,7 @@ etiqueta es solo el nnombre
     width: 110px;
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
+    padding: 1px 1px; 
 }
 
 .discover-cards {
@@ -477,11 +511,12 @@ etiqueta es solo el nnombre
     background-color: var(--bg-letter);
     border: none;
     padding: 5px 15px;
-    color: var(--bg-silver);
     border-radius: 10px;
     cursor: pointer;
 }
-
+.btn-add a{
+    color: var(--bg-silver);
+}
 .btn-curse {
     display: flex;
     align-self: center;
@@ -490,11 +525,160 @@ etiqueta es solo el nnombre
     background: none;
     border: 1px solid var(--bg-bordo);
     padding: 15px 20px;
-    color: var(--bg-silver);
     cursor: pointer;
     border-radius: 5px;
 }
+.btn-curse a{
+    color: var(--bg-silver);
+}
+/*CONTACTANOS*/
+#contactanos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 200px 0;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 2px solid var(--bg-white);
+    padding: 0 170px;
+}
+.contact h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--bg-black);
 
+}
+.contact p{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--bg-silver);
+}
+.direction {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-bordo);
+    color: var(--bg-white);
+    padding: 5px 5px;
+    border-radius: 5px;
+    gap: 10px;
+    max-width: 700;
+}
+.direction h2 {
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--bg-gray);
+}
+.direction strong{
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--bg-silver);
+
+}
+.direction p{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--bg-silver);
+}
+.maps {
+    max-width: 500px;
+    max-width: 500px;
+    background-color: var(--bg-bordo);
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*REGISTRATE*/
+
+#session {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    width: 100%;
+    padding: 10px 0;
+    background: linear-gradient(to top, var(--bg-grimso), transparent 100%);
+}
+
+.log-in{
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient( var(--bg-letter), var(--bg-black) 100%);    
+    padding: 60px 60px;
+    border-radius: 50% ;
+    box-shadow: 60px 20px 200px var(--bg-black);
+
+}
+.log-in p{
+    font-size: 35px;
+    font-weight: 900px;
+    color: var(--bg-silver);
+    font-family: 'Poppins ital';
+}
+.log-in-google {
+    font-size: 18px;
+    font-weight: 300;
+    background-color: var(--bg-white);
+    border-radius: 5px;
+    padding: 15px 15px;
+    color: black;
+}
+.log-in-apple {
+    font-size: 18px;
+    font-weight: 300;
+    background-color: var(--bg-white);
+    border-radius: 5px;
+    padding: 15px 15px;
+    color: black;
+
+}
+.mail {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color:transparent;
+    color: var(--bg-white);
+    border-radius: 5px;
+    
+
+}
+.siguiente {
+    display: flex;
+    padding: 5px 50px;
+    border-radius: 5px;
+    background-color: var(--bg-silver);
+    color: var(--bg-black);
+    border: 2px solid var(--bg-gray);
+    font-size: 32px;
+    font-weight: 700;
+}
+.log-in a{
+    color: var(--bg-silver);
+    font-size: 14px
+}
+.log-in-google img{
+    max-width: 16px;
+}
+.log-in-apple img{
+    max-width: 18px;
+}
 /* FOOTER */
 
 footer {
@@ -506,6 +690,7 @@ footer {
     align-items: center;
     gap: 50px;
     padding: 100px 0 15px 0;
+    width: 100%;
 }
 .footer-links a{
     color: var(--bg-silver);
@@ -532,3 +717,4 @@ footer {
     font-size: 12px;
     font-weight: 300;
 }
+
