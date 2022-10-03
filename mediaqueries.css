@@ -61,6 +61,7 @@
     .hero-info p{
         width: 60%;
         max-width: 700px;
+        margin: 0 10px;
 
     }
     .hero-card {
@@ -187,9 +188,25 @@
 
 
 @media (max-width: 576px) {
-    .navbar{
+    .navbar ul {
         width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.5s ease-out;
     }
+    #toggle-menu:checked + .navbar-list {
+        transform: translateX(0%);
+        transition: all 0.5s ease-in;
+
+    }
+
+
     .donation-icon{
         display: flex;
 
@@ -198,8 +215,7 @@
         display: none;
     }
     .hero-info p{
-        width: 70%;
-        max-width: unset;
+        max-width: 100%;
 
     }
     .info{
